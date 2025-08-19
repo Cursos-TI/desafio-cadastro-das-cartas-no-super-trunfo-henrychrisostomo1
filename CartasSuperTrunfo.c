@@ -2,12 +2,22 @@
 
 int main(){
     int pontos;
-    int habitantes;   
-    float area;
-    float pib; 
+    int habitantes = 1232500;  
+    float area = 1521.11;
+    float pib = 699.28;  
     char inicial;
     char codigo;
     char cidade[20];
+    float Densidade = 810.26;
+    float percapita = 1762.53;
+    float quociente1 = (float) habitantes / area;
+    float quociente2 = (float) habitantes / pib;
+
+    printf("Quociente: %.2f\n", quociente2);  
+
+
+
+    printf("Quociente: %.2f\n", quociente1);  
 
     printf("Digite os pontos turisticos: \n");
     scanf("%d", &pontos);
@@ -15,8 +25,8 @@ int main(){
     printf("Digite os habitantes: \n");
     scanf("%d", &habitantes);
 
-    printf("Digite a área: \n");
-    scanf("%f", &area); 
+    printf("Digite a km: \n");
+    scanf("%f", &area);
 
     printf("Digite o Pib: \n");
     scanf("%f", &pib);
@@ -30,9 +40,7 @@ int main(){
     printf("Digite a Cidade:\n");
     scanf("%s", cidade);
 
-    printf("nome da cidade: %s - inicial: %s - código da carta: %s", cidade, inicial, codigo);
-    printf("pontos turísticos: %d - população: %d - km2: %f - Pib: %f", pontos, habitantes, area, pib);
-
+    
 
     return 0;
 
