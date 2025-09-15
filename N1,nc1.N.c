@@ -20,7 +20,7 @@ int main(){
     printf("5. Densidade Populacinal  \n");
     printf("6. Percapita  \n");
     printf("7. Super Poder  \n");
-    scanf("%d", escolhacarta1);
+    scanf("%d", &escolhacarta1);
 
     printf("*** São Paulo VS Rio de Janeiro *** \n");
     printf("Escolha uma opção: \n");
@@ -31,7 +31,7 @@ int main(){
     printf("5. Densidade Populacinal  \n");
     printf("6. Percapita  \n");
     printf("7. Super Poder  \n");
-    scanf("%d", escolhacarta2);
+    scanf("%d", &escolhacarta2);
 
     switch (escolhacarta1)
     {
@@ -91,7 +91,7 @@ int main(){
         (pontos1 == area2) && (pontos1 == pib2) || (pontos1 == densidade2)
      && (pontos1 == percapita2) || (pontos1 == superpoder2))
     {
-        printf("### Jogo Empatou ### \n")
+        printf("### Jogo Empatou ### \n");
     } else if ((pontos1 > pontos2) && (pontos1 > habitantes2) ||
         (pontos1 > area2) && (pontos1 > pib2) || (pontos1 > densidade2)
      && (pontos1 > percapita2) || (pontos1 > superpoder2))
@@ -101,11 +101,63 @@ int main(){
         (habitantes1 == area2) && (habitantes1 == pib2) || (habitantes1 == densidade2)
      && (habitantes1 == percapita2) || (habitantes1 == superpoder2))
     {
-        printf("### Jogo Empatou ### \n")
-    } else if ((habitantes1 > pontos2) && (pontos1 > pontos2) ||
+        printf("### Jogo Empatou ### \n");
+    } else if ((habitantes1 > pontos2) && (habitantes1 > habitantes2) ||
         (habitantes1 > area2) && (habitantes1 > pib2) || (habitantes1 > densidade2)
      && (habitantes1 > percapita2) || (habitantes1 > superpoder2))
     {
         printf("### Carta 1, São Paulo Venceu! ### \n");
-    
- }
+    } else if ((area1 == pontos2) && (area1 == habitantes2) ||
+        (area1 == area2) && (area1 == pib2) || (area1 == densidade2)
+     && (area1 == percapita2) || (area1 == superpoder2))
+    {
+        printf("### Jogo Empatou ### \n");
+    } else if ((area1 > pontos2) && (area1 > habitantes2) ||
+        (area1 > area2) && (area1 > pib2) || (area1 > densidade2)
+     && (area1 > percapita2) || (area1 > superpoder2))
+    {
+      printf("### Carta 1, São Paulo Venceu! ### \n");
+    } else if ((pib1 == pontos2) && (pib1 == habitantes2) ||
+        (pib1 == area2) && (pib1 == pib2) || (pib1 == densidade2)
+     && (pib1 == percapita2) || (pib1 == superpoder2))
+    {
+      printf("### Jogo Empatou ### \n");
+    } else if ((pib1 > pontos2) && (pib1 > habitantes2) ||
+        (pib1 > area2) && (pib1 > pib2) || (pib1 > densidade2)
+     && (pib1 > percapita2) || (pib1 > superpoder2))
+     {
+      printf("### Carta 1, São Paulo Venceu! ### \n");
+     } else if ((densidade1 == pontos2) && (densidade1 == habitantes2) ||
+        (densidade1 == area2) && (densidade1 == pib2) || (densidade1 == densidade2)
+     && (densidade1 == percapita2) || (densidade1 == superpoder2))
+     {
+       printf("### Jogo Empatou ### \n");
+     } else if ((densidade1 > pontos2) && (densidade1 > habitantes2) ||
+        (densidade1 > area2) && (densidade1 > pib2) || (densidade1 < densidade2)
+     && (densidade1 > percapita2) || (densidade1 > superpoder2))
+     {
+       printf("### Carta 1, São Paulo Venceu! ### \n");
+     } else if ((percapita1 == pontos2) && (percapita1 == habitantes2) ||
+        (percapita1 == area2) && (percapita1 == pib2) || (percapita1 == densidade2)
+     && (percapita1 == percapita2) || (percapita1 == superpoder2))
+     {
+       printf("### Jogo Empatou ### \n");
+     } else if ((percapita1 > pontos2) && (percapita1 > habitantes2) ||
+        (percapita1 > area2) && (percapita1 > pib2) || (percapita1 > densidade2)
+     && (percapita1 > percapita2) || (percapita1 > superpoder2))
+     {
+       printf("### Carta 1, São Paulo Venceu! ### \n");
+     } else if ((superpoder1 == pontos2) && (superpoder1 == habitantes2) ||
+        (superpoder1 == area2) && (superpoder1 == pib2) || (superpoder1 == densidade2)
+     && (superpoder1 == percapita2) || (superpoder1 == superpoder2))
+     {
+       printf("### Jogo Empatou ### \n");
+     } else if ((superpoder1 > pontos2) && (superpoder1 > habitantes2) ||
+        (superpoder1 > area2) && (superpoder1 > pib2) || (superpoder1 > densidade2)
+     && (superpoder1 > percapita2) || (superpoder1 > superpoder2))
+     {
+       printf("### Carta 1, São Paulo Venceu! ### \n");
+     } else {
+       printf("### Carta 2, Rio de Janeiro Venceu! ### \n");
+     }
+  }
