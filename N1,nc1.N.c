@@ -2,162 +2,107 @@
 
 int main(){
 
-    int escolhacarta1, escolhacarta2;
+    /*int escolhacarta1, escolhacarta2;
     int pontos1 = 50, pontos2 = 30;
     int habitantes1 = 1232500, habitantes2 = 6748000;
     float area1 = 1521.11, area2 = 1200.25;
     float pib1 = 699.28, pib2 = 300.50;  
     float densidade1 = 1810.26, densidade2 = 15622.16;
     float percapita1 = 1762.53, percapita2 = 22455.91;
-    float superpoder1 = 1234770.38, superpoder2 = 6749530.50;
+    float superpoder1 = 1234770.38, superpoder2 = 6749530.50;88 */
 
-    printf("*** São Paulo VS Rio de Janeiro *** /n");
-    printf("Escolha uma opção: \n");
-    printf("1. Pontos Turísticos  \n");
-    printf("2. Habitantes  \n");
-    printf("3. Área Km  \n");
-    printf("4. Pib  \n");
-    printf("5. Densidade Populacinal  \n");
-    printf("6. Percapita  \n");
-    printf("7. Super Poder  \n");
-    scanf("%d", &escolhacarta1);
+     int resultado1, resultado2;
+     char primeiroAtributo, segundoAtributo;
+     int ataque1, ataque2, defesa1, defesa2, recuo1, recuo2, superpoder1, superpoder2
 
-    printf("*** São Paulo VS Rio de Janeiro *** \n");
-    printf("Escolha uma opção: \n");
-    printf("1. Pontos Turísticos  \n");
-    printf("2. Habitantes  \n");
-    printf("3. Área Km  \n");
-    printf("4. PIB  \n");
-    printf("5. Densidade Populacinal  \n");
-    printf("6. Percapita  \n");
-    printf("7. Super Poder  \n");
-    scanf("%d", &escolhacarta2);
+     ataque1 = 1; 
 
-    switch (escolhacarta1)
-    {
-    case 1:
-      printf("Carta 1 SP: Pontos Turísticos \n");
-      break;
-    case 2:
-      printf("Carta 1 SP: Habitantes \n");
-      break;
-    case 3:
-      printf("Carta 1 SP: Área Km \n");
-      break;
-    case 4:
-      printf("Carta 1 SP: PIB \n");
-      break;
-    case 5:
-      printf("Carta 1 SP: Densidade Populacinal \n");
-      break;
-    case 6:
-      printf("Carta 1 SP: Percapita \n");
-      break;
-    case 7:
-      printf("Carta 1 SP: Super Poder \n");
-      break;
+     // Inicio do Jogo
+     printf("Bem- Vind ao jogo! \n");
+     printf("Escolha o primeiro Atributo. \n");
+     printf("A. Ataque \n");
+     printf("D. Defesa \n");
+     printf("R. Recuo \n");
+     printf("S. Super Poder \n");
+
+     printf("Escolha a comparação: \n");
+     scanf("%c", &primeiroAtributo);
+
+     switch (primeiroAtributo)
+     {
+     case 'A':
+     case 'a':
+         printf("Você escolheu a opção Ataque! \n");
+         resultado1 = ataque1 > ataque2 ? 1 : 0;
+         break;
+     case 'D':
+     case 'd':
+         printf("Você escolheu a opção Defesa! \n");
+         resultado1 = defesa1 > defesa2 ? 1 : 0;
+         break;
+    case 'R':
+    case 'r':
+         printf("Você escolheu a opção Recuo! \n");
+         resultado1 = recuo1 > recuo2 ? 1 : 0;
+         break;
+    case 'S':
+    case 's':
+         printf("Você escolheu a opção Super Poder! \n");
+         resultado1 = recuo1 > recuo2 ? 1 : 0;
+         break;
     default:
-      printf("Opção Inválida \n");
-    }
-
-    switch (escolhacarta2)
-    {
-    case 1:
-      printf("Carta 2 RJ: Pontos Turísticos \n");
-      break;
-    case 2:
-      printf("Carta 2 RJ: Habitantes \n");
-      break;
-    case 3:
-      printf("Carta 2 RJ: Área Km \n");
-      break;
-    case 4:
-      printf("Carta 2 RJ: PIB \n");
-      break;
-    case 5:
-      printf("Carta 2 RJ: Densidade Populacinal \n");
-      break;
-    case 6:
-      printf("Carta 2 RJ: Percapita \n");
-      break;
-    case 7:
-      printf("Carta 2 RJ: Super Poder \n");
-      break;
-    default:
-      printf("Opção Inválida \n");
-    }
-
-    if ((pontos1 == pontos2) && (pontos1 == habitantes2) ||
-        (pontos1 == area2) && (pontos1 == pib2) || (pontos1 == densidade2)
-     && (pontos1 == percapita2) || (pontos1 == superpoder2))
-    {
-        printf("### Jogo Empatou ### \n");
-    } else if ((pontos1 > pontos2) && (pontos1 > habitantes2) ||
-        (pontos1 > area2) && (pontos1 > pib2) || (pontos1 > densidade2)
-     && (pontos1 > percapita2) || (pontos1 > superpoder2))
-    {
-        printf("### Carta 1, São Paulo Venceu! ### \n");
-    } else if ((habitantes1 == habitantes2) && (habitantes1 == pontos2) ||
-        (habitantes1 == area2) && (habitantes1 == pib2) || (habitantes1 == densidade2)
-     && (habitantes1 == percapita2) || (habitantes1 == superpoder2))
-    {
-        printf("### Jogo Empatou ### \n");
-    } else if ((habitantes1 > pontos2) && (habitantes1 > habitantes2) ||
-        (habitantes1 > area2) && (habitantes1 > pib2) || (habitantes1 > densidade2)
-     && (habitantes1 > percapita2) || (habitantes1 > superpoder2))
-    {
-        printf("### Carta 1, São Paulo Venceu! ### \n");
-    } else if ((area1 == pontos2) && (area1 == habitantes2) ||
-        (area1 == area2) && (area1 == pib2) || (area1 == densidade2)
-     && (area1 == percapita2) || (area1 == superpoder2))
-    {
-        printf("### Jogo Empatou ### \n");
-    } else if ((area1 > pontos2) && (area1 > habitantes2) ||
-        (area1 > area2) && (area1 > pib2) || (area1 > densidade2)
-     && (area1 > percapita2) || (area1 > superpoder2))
-    {
-      printf("### Carta 1, São Paulo Venceu! ### \n");
-    } else if ((pib1 == pontos2) && (pib1 == habitantes2) ||
-        (pib1 == area2) && (pib1 == pib2) || (pib1 == densidade2)
-     && (pib1 == percapita2) || (pib1 == superpoder2))
-    {
-      printf("### Jogo Empatou ### \n");
-    } else if ((pib1 > pontos2) && (pib1 > habitantes2) ||
-        (pib1 > area2) && (pib1 > pib2) || (pib1 > densidade2)
-     && (pib1 > percapita2) || (pib1 > superpoder2))
-     {
-      printf("### Carta 1, São Paulo Venceu! ### \n");
-     } else if ((densidade1 == pontos2) && (densidade1 == habitantes2) ||
-        (densidade1 == area2) && (densidade1 == pib2) || (densidade1 == densidade2)
-     && (densidade1 == percapita2) || (densidade1 == superpoder2))
-     {
-       printf("### Jogo Empatou ### \n");
-     } else if ((densidade1 > pontos2) && (densidade1 > habitantes2) ||
-        (densidade1 > area2) && (densidade1 > pib2) || (densidade1 < densidade2)
-     && (densidade1 > percapita2) || (densidade1 > superpoder2))
-     {
-       printf("### Carta 1, São Paulo Venceu! ### \n");
-     } else if ((percapita1 == pontos2) && (percapita1 == habitantes2) ||
-        (percapita1 == area2) && (percapita1 == pib2) || (percapita1 == densidade2)
-     && (percapita1 == percapita2) || (percapita1 == superpoder2))
-     {
-       printf("### Jogo Empatou ### \n");
-     } else if ((percapita1 > pontos2) && (percapita1 > habitantes2) ||
-        (percapita1 > area2) && (percapita1 > pib2) || (percapita1 > densidade2)
-     && (percapita1 > percapita2) || (percapita1 > superpoder2))
-     {
-       printf("### Carta 1, São Paulo Venceu! ### \n");
-     } else if ((superpoder1 == pontos2) && (superpoder1 == habitantes2) ||
-        (superpoder1 == area2) && (superpoder1 == pib2) || (superpoder1 == densidade2)
-     && (superpoder1 == percapita2) || (superpoder1 == superpoder2))
-     {
-       printf("### Jogo Empatou ### \n");
-     } else if ((superpoder1 > pontos2) && (superpoder1 > habitantes2) ||
-        (superpoder1 > area2) && (superpoder1 > pib2) || (superpoder1 > densidade2)
-     && (superpoder1 > percapita2) || (superpoder1 > superpoder2))
-     {
-       printf("### Carta 1, São Paulo Venceu! ### \n");
-     } else {
-       printf("### Carta 2, Rio de Janeiro Venceu! ### \n");
+         printf("Opção de Jogo Inválida \n");
+         break;
      }
-  }
+
+     printf("Escolha o segundo Atributo. \n");
+     printf("Atenção: Você deve escolher um atributo diferente do primeiro. \n");
+     printf("A. Ataque \n");
+     printf("D. Defesa \n");
+     printf("R. Recuo \n");
+     printf("S. Super Poder \n");
+
+     printf("Escolha a comparação: \n");
+     scanf("%c", &segundoAtributo);
+
+     if(primeiroAtributo == segundoAtributo)
+     {
+         printf("Você escolheu o mesme atributo! \n");
+     } else {
+          switch (segundoAtributo)
+          {
+     case 'A':
+     case 'a':
+         printf("Você escolheu a opção Ataque! \n");
+         resultado2 = ataque1 > ataque2 ? 1 : 0;
+         break;
+     case 'D':
+     case 'd':
+         printf("Você escolheu a opção Defesa! \n");
+         resultado2 = defesa1 > defesa2 ? 1 : 0;
+         break;
+    case 'R':
+    case 'r':
+         printf("Você escolheu a opção Recuo! \n");
+         resultado2 = recuo1 > recuo2 ? 1 : 0;
+         break;
+    case 'S':
+    case 's':
+         printf("Você escolheu a opção Super Poder! \n");
+         resultado2 = recuo1 > recuo2 ? 1 : 0;
+         break;
+    default:
+         printf("Opção de Jogo Inválida \n");
+         break;
+     }
+
+     if (resultado1 && resultado2)
+     {
+        printf("***Parabéns, Carta1 São Paulo Venceu*** \n");
+     } else if (resultado1 != resultado2){
+         printf("Empatou! \n");
+     } else {
+        printf("*** Parabéns, Carta2 Rio de Janeiro venceu*** \n");
+     }
+      
+}
