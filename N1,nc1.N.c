@@ -13,9 +13,16 @@ int main(){
 
      int resultado1, resultado2;
      char primeiroAtributo, segundoAtributo;
-     int ataque1, ataque2, defesa1, defesa2, recuo1, recuo2, superpoder1, superpoder2
+     int ataque1, ataque2, defesa1, defesa2, recuo1, recuo2, superpoder1, superpoder2;
 
      ataque1 = 1; 
+     ataque2 = 0;
+     defesa1 = 1;
+     defesa2 = 0;
+     recuo1 = 0;
+     recuo2 = 1;
+     superpoder1 = 0;
+     superpoder2 = 1;
 
      // Inicio do Jogo
      printf("Bem- Vind ao jogo! \n");
@@ -95,6 +102,7 @@ int main(){
          printf("Opção de Jogo Inválida \n");
          break;
      }
+     }
 
      if (resultado1 && resultado2)
      {
@@ -104,5 +112,5 @@ int main(){
      } else {
         printf("*** Parabéns, Carta2 Rio de Janeiro venceu*** \n");
      }
-      
+
 }
